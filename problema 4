@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+// Función para verificar si un número es múltiplo de otro
+int multiplo(int a, int b) {
+  // Si el residuo de la división es 0, entonces b es múltiplo de a
+  if (b % a == 0) {
+    return 1; // Verdadero
+  } else {
+    return 0; // Falso
+  }
+}
+
+int main() {
+  int a, b;
+  // Solicitar al usuario que ingrese los dos números
+  printf("Ingrese el primer número: ");
+  scanf("%d", &a);
+  printf("Ingrese el segundo número: ");
+  scanf("%d", &b);
+  // Llamar a la función multiplo() para verificar
+  if (multiplo(a, b)) {
+    printf("%d es múltiplo de %d.\n", b, a);
+  } else {
+    printf("%d no es múltiplo de %d.\n", b, a);
+  }
+  return 0;
+}
