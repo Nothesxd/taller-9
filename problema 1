@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+// Función para comprobar si un número es par
+int par(int num) {
+  if (num % 2 == 0) {
+    return 1; 
+  } else {
+    return 0; 
+  }
+}
+
+int main() {
+  int num, count, i;
+
+  printf("Introduzca el número de enteros: ");
+  scanf("%d", &count);
+
+  for (i = 0; i < count; ++i) {
+    printf("Introduzca un número entero: ");
+    scanf("%d", &num);
+
+    if (par(num)) {
+      printf("%d es impar.\n", num);
+    } else {
+      printf("%d es par.\n", num);
+    }
+  }
+
+  return 0;
+}
