@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+// Función para calcular la distancia entre dos puntos
+float distancia(float x1, float y1, float x2, float y2) {
+  float distancia = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+  return distancia;
+}
+
+int main() {
+  int n;
+  float x1, y1, x2, y2, dist;
+
+  // Solicitar al usuario el número de pares de puntos
+  printf("Ingrese el número de pares de puntos: ");
+  scanf("%d", &n);
+
+  // Iterar sobre cada par de puntos
+  for (int i = 1; i <= n; i++) {
+    // Solicitar las coordenadas del primer punto
+    printf("Ingrese las coordenadas del primer punto (%d): ", i);
+    scanf("%f %f", &x1, &y1);
+
+    // Solicitar las coordenadas del segundo punto
+    printf("Ingrese las coordenadas del segundo punto (%d): ", i);
+    scanf("%f %f", &x2, &y2);
+
+    // Calcular la distancia entre los puntos
+    dist = distancia(x1, y1, x2, y2);
+
+    // Mostrar la distancia
+    printf("La distancia entre los puntos (%d) es: %.2f\n", i, dist);
+  }
+
+  return 0;
+}
